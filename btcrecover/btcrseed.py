@@ -3711,7 +3711,7 @@ def main(argv):
 
         if not listseeds:
             # Print Timestamp that this step occured
-            print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), ": Search Complete")
+            print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), ": Search Complete", mnemonic_found)
 
             if mnemonic_found:
                 return " ".join(loaded_wallet.id_to_word(i) for i in mnemonic_found), loaded_wallet.get_path_coin()
